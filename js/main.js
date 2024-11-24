@@ -1,0 +1,1 @@
+document.getElementsByTagName('center')[0].innerHTML += '<h2>Hello, World!</h2>';
