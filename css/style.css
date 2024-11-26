@@ -12,11 +12,12 @@ body {
 
     background: radial-gradient(
         circle at 50%, var(--primary-back-color),  /* a circle in the center, with some color */
-        var(--primary-back-color) 50%, /* the specified color starts at 50% of the radius */
-        var(--primary-back-color) 70%, /* same here, 70% */
+        /* var(--primary-back-color) 50%, */ /* the specified color starts at 50% of the radius */
+        /* var(--primary-back-color) 70%, */ /* same here, 70% */
         var(--primary-back-color) 95%, /* 90% */
         var(--secondary-back-color) 95%    /* 100% */
     );
     background-repeat: repeat;
     background-size: 50px 50px;
+    background-position: center;
 }
