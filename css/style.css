@@ -7,17 +7,79 @@
 }
 
 body {
+    margin: 0;
     font-family:  system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: var(--font-color);
 
-    background: radial-gradient(
-        circle at 50%, var(--primary-back-color),  /* a circle in the center, with some color */
+    /* background: radial-gradient(
+        circle at 50%, var(--primary-back-color),*/  /* a circle in the center, with some color */
         /* var(--primary-back-color) 50%, */ /* the specified color starts at 50% of the radius */
         /* var(--primary-back-color) 70%, */ /* same here, 70% */
-        var(--primary-back-color) 95%, /* 90% */
-        var(--secondary-back-color) 95%    /* 100% */
-    );
-    background-repeat: repeat;
-    background-size: 50px 50px;
+        /* var(--primary-back-color) 95%, */ /* 90% */
+        /* var(--secondary-back-color) 95% */    /* 100% */
+    /*); */
+
+    background: linear-gradient(30deg, #fffb00, #ff0040);
+
+    /* the gradient pattern should scale to the entire window size */
+    background-size: 100vw 100vw;
+    background-repeat: no-repeat;
     background-position: center;
 }
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--primary-back-color);
+    margin: 0;
+}
+
+nav ul {
+    display: inline-flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-right: 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--font-color);
+}
+
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--primary-back-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* HTML: <div class="load-animation"></div> */
+.load-animation {
+    width: 50px;
+    padding: 8px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: #25b09b;
+    --_m: 
+      conic-gradient(#0000 10%,#000),
+      linear-gradient(#000 0 0) content-box;
+    -webkit-mask: var(--_m);
+            mask: var(--_m);
+    -webkit-mask-composite: source-out;
+            mask-composite: exclude; /* substract */
+    animation: l3 1s infinite linear;
+}
+  @keyframes l3 {to{transform: rotate(1turn)}}
