@@ -1,9 +1,16 @@
 
 window.addEventListener('load', () => {
-    const preloader = document.getElementById('preloader');
-    preloader.style.display = 'none';
+    document.getElementById('preloader').style.display = 'none';
+    document.getElementById('navbar').style.display = 'flex';
 })
 
-
-document.getElementsByTagName('center')[0].innerHTML += '<h2>Hello, World!</h2>';
-document.getElementsByTagName('center')[0].innerHTML += '<h2>Ne ni še konc</h2>';
+// ne dela
+document.querySelectorAll('nav-icon').forEach(icon => {
+    icon.addEventListener('mouseover', () => {
+        //let parent = icon.parentElement;
+        //let icon_text = parent.querySelector('.icon-text');
+        let icon_text = icon.nextElementSibling;
+        icon_text.style.display = 'block';
+        console.log('called');
+    });
+});

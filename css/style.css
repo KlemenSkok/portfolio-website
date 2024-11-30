@@ -4,6 +4,20 @@
     --secondary-back-color: #acacac;
 
     --font-color: #f8f9fa;
+
+    /* color template (tailwind slate) */
+    --color-050: #f8fafc;
+    --color-100: #f1f5f9;
+    --color-200: #e2e8f0;
+    --color-300: #cbd5e1;
+    --color-400: #94a3b8;
+    --color-500: #64748b;
+    --color-600: #475569;
+    --color-700: #334155;
+    --color-800: #1e293b;
+    --color-900: #0f172a;
+    --color-950: #020617;
+
 }
 
 * {
@@ -15,7 +29,7 @@
 body {
     margin: 0;
     font-family:  system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: var(--font-color);
+    color: var(--color-100);
 
     /* background: radial-gradient(
         circle at 50%, var(--primary-back-color),*/  /* a circle in the center, with some color */
@@ -25,7 +39,7 @@ body {
         /* var(--secondary-back-color) 95% */    /* 100% */
     /*); */
 
-    background: linear-gradient(30deg, #06645c , #060746 30%, #000000);
+    background: linear-gradient(30deg, var(--color-800) , var(--color-800) 30%, var(--color-950));
 
     /* the gradient pattern should scale to the entire window size */
     background-size: 100vw 100vw;
@@ -34,33 +48,8 @@ body {
     overflow: hidden;
 }
 
-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: none;
-    margin: 0;
-    font-size: 1.4rem;
-    max-height: 2rem;
-    opacity: 0.8;
-    z-index: 10;
-    position: fixed;
-}
 
-header nav ul {
-    display: inline-flex;
-    list-style: none;
-}
 
-header nav ul li {
-    margin-right: 1rem;
-}
-
-header nav ul a {
-    text-decoration: none;
-    color: var(--font-color);
-}
 
 /* preloader section */
 #preloader {
@@ -87,11 +76,34 @@ header nav ul a {
     z-index: -1;
     position: relative;
 }
-
 #hero > * {
     text-align: center;
     font-size: 4rem;
 }
+
+/* navigation bar */
+#navbar {
+    position: fixed;
+    left: 0;
+    top: 25%;
+    bottom: 25%;
+    height: 50%;
+    align-items: center;
+    user-select: none;
+    max-height: 50vh;
+    display: none; /* initially hidden */
+}
+#navbar .nav-icon {
+    font-size: 5rem;
+    transition: 0.2s ease-in;
+}
+#navbar .nav-icon:hover {
+    transform: translateY(-0.4rem);
+}
+#navbar .nav-text {
+    display: none;
+}
+
 
 
 
