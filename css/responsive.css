@@ -1,0 +1,15 @@
+/* CSS za responsive css - za manjse zaslone */
+
+@media only screen and (max-width: 768px) {
+    #navbar ul {
+        display: none;
+    }
+    #navbar .nav-menu {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        font-size: 8rem;
+    }
+
+}

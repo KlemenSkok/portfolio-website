@@ -1,0 +1,25 @@
+{
+    "projects": [
+        {
+            "name": "Spletna stran o HTML in CSS",
+            "description": "Spletna stran, ki sem jo naredil v prvem letniku srednje šole. Ni bila najboljša, vendar sem se veliko naučil in mislim, da vseeno spada na ta seznam.",
+            "datum_konca": "november 2021",
+            "link": "",
+            "slika": ""
+        },
+        {
+            "name": "Videoigra v jeziku C++ <i>Sea Shepherd Rules</i>",
+            "description": "Videoigra, napisana v jeziku C++, z uporabo knjižnice SDL2. Narejena za oceno pri predmetu RPA v tretjem letniku srednje šole.",
+            "datum_konca": "maj 2024",
+            "link": "https://github.com/KlemenSkok/SeaShepherdRules",
+            "slika": ""
+        },
+        {
+            "name": "Online videoigra v jeziku C++ <i>Čas za obračun</i>",
+            "description": "Online PVP videoigra, ki jo trenutno razvijam v jeziku C++ kot izdelek pri poklicni maturi. Narejena z uporabo knjižnice SDL2.",
+            "datum_konca": "v razvoju",
+            "link": "https://github.com/KlemenSkok/cas-za-obracun",
+            "slika": ""
+        }
+    ]
+}
