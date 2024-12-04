@@ -53,12 +53,12 @@ function fillProjects(data) {
         `;
         root.appendChild(li);
     });
-
+    
     setProjectCards();
 }
 
 function readProjectsData() {
-    fetch('../data/projects.json')
+    fetch('https://raw.githubusercontent.com/KlemenSkok/portfolio-website/main/data/projects.json')
     .then(response =>  {
         if(!response.ok) {
             throw new Error('Failed to load projects data');
