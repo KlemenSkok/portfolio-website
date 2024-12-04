@@ -25,7 +25,6 @@ function fillProjects(data) {
     //console.log(projects);
 
     const root = document.getElementById('projects-ul');
-    /* for(const p of projects) { */
     projects.forEach(p => {
         const li = document.createElement('li');
         let descr = "";
@@ -57,11 +56,24 @@ function fillProjects(data) {
     setProjectCards();
 }
 
+function fillSkills(data) {
+    const skills = data.skills;
+
+    const root = document.getElementById('skills-container');
+
+    skills.forEach(s => {
+        const div = document.createElement('div');
+        div.setAttribute('class', 'skill-box');
+        div.innerHTML = `${s.name}`;
+        root.appendChild(div);
+    });
+}
+
 function readProjectsData() {
     fetch('https://raw.githubusercontent.com/KlemenSkok/portfolio-website/main/data/projects.json')
     .then(response =>  {
         if(!response.ok) {
-            throw new Error('Failed to load projects data');
+            throw new Error('Failed to open projects.json');
         }
         //console.log(response.json());
         return response.json();
@@ -74,9 +86,26 @@ function readProjectsData() {
     });
 }
 
+function readSkillsData() {
+    fetch('https://raw.githubusercontent.com/KlemenSkok/portfolio-website/main/data/skills.json')
+    .then(response => {
+        if(!response.ok) {
+            throw new Error('Failed to open skills.json');
+        }
+        return response.json();
+    })
+    .then(data => {
+        fillSkills(data);
+    })
+    .catch(err =>{
+        console.log('Error loading skills data: ', err);
+    });
+}
+
 
 window.addEventListener('load', () => {
     readProjectsData();
+    readSkillsData();
     document.getElementById('preloader').style.display = 'none';
     document.getElementById('navbar').style.display = 'flex';
 });
