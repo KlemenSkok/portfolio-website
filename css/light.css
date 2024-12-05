@@ -1,0 +1,32 @@
+:root {
+    --primary-back-color: #f8f9fa;
+    --secondary-back-color: #f8f9fa;
+
+    --font-color: #212529;
+
+    /* color template (tailwind slate) */
+    --color-050: #09090b;
+    --color-100: #18181b;
+    --color-200: #27272a;
+    --color-300: #3f3f46;
+    --color-400: #52525b;
+    --color-500: #71717a;
+    --color-600: #a1a1aa;
+    --color-700: #d4d4d8;
+    --color-800: #e4e4e7;
+    --color-850: #f4f4f5;
+    --color-900: #fafafa;
+    --color-950: #ffffff;
+
+    /* almost 50 shades of gray */
+    --test-950: #0f0f0f;
+    --test-850: #242424;
+    --test-750: #444444;
+    --test-650: #666666;
+    --test-550: #3f3f3f;
+    --test-450: #4f4f4f;
+    --test-350: #5f5f5f;
+    --test-250: #6f6f6f;
+    --test-150: #7f7f7f;
+    --test-050: #8f8f8f;
+}

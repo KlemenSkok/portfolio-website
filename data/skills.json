@@ -1,6 +1,5 @@
 {
     "skills": [
-        {"name": "XML, JSON", "type": "lang"},
         {"name": "Excel VBA", "type": "lang"},
         {"name": "Python", "type": "lang"},
         {"name": "C/C++", "type": "lang"},
@@ -23,11 +22,9 @@
         {"name": "Ubuntu Linux", "type": "OS"},
         {"name": "VMWare", "type": "software"},
         {"name": "Blender", "type": "software"},
-        {"name": "MS Office", "type": "software"},
         {"name": "Logix 5000", "type": "software"},
         {"name": "TIA Portal", "type": "software"},
         {"name": "Paint.net", "type": "software"},
-        {"name": "Virtualbox", "type": "software"},
         {"name": "Visual Studio", "type": "software"},
         {"name": "Visual Studio Code", "type": "software"},
         {"name": "Cisco Packet Tracer", "type": "software"}
