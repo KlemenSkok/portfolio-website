@@ -12,4 +12,8 @@
         font-size: 10vw;
     }
 
+    .section {
+        padding: .5rem;
+    }
+
 }

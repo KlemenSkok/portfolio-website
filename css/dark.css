@@ -19,6 +19,20 @@
     --color-900: #0f172a;
     --color-950: #020617;
 
+    /* secondary color pallete - shades of orange  */ 
+    --color2-050: #fff5eb;
+    --color2-100: #ffebd3;
+    --color2-200: #ffdfb5;
+    --color2-300: #ffcf95;
+    --color2-400: #ffbe75;
+    --color2-500: #ff9f4d;
+    --color2-600: #ff7f26;
+    --color2-700: #ff5f00;
+    --color2-800: #e64a00;
+    --color2-850: #b33b00;
+    --color2-900: #802e00;
+    --color2-950: #4d1f00;
+
     /* almost 50 shades of gray */
     --test-950: #0f0f0f;
     --test-850: #242424;

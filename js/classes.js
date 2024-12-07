@@ -24,7 +24,6 @@ export class Skills {
     }
 
     async load (path) {
-        console.log('loading skills data');
         await fetch(path) // ! await, da pocaka na fetch
         .then(response => {
             if(!response.ok) {

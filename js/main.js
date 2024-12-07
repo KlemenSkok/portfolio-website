@@ -47,15 +47,25 @@ function enableSmoothScroll() {
 function toggleColorMode() {
     const sw = document.getElementById('color-switcher');
 
-    if(sw.firstElementChild.innerHTML == 'dark_mode') {
+    if(sw.firstElementChild.innerHTML == 'dark_mode') { // set light mode
         sw.firstElementChild.innerHTML = 'light_mode';
         sw.style.color = '#d9773b';
         document.getElementById('color-mode').href = 'css/light.css';
+        localStorage.setItem('color_mode', 'light'); // save to local storage
+
+        // icons
+        document.getElementById('contact-github').src = 'assets/icons/github-mark.svg';
+        document.getElementById('contact-discord').src = 'assets/icons/discord-mark-blue.svg';
     }
-    else {
+    else {                                              // set dark mode
         sw.firstElementChild.innerHTML = 'dark_mode';
         sw.style.color = 'yellow';
         document.getElementById('color-mode').href = 'css/dark.css';
+        localStorage.setItem('color_mode', 'dark'); // save to local storage
+        
+        // icons
+        document.getElementById('contact-github').src = 'assets/icons/github-mark-white.svg';
+        document.getElementById('contact-discord').src = 'assets/icons/discord-mark-white.svg';
     }
 }
 
@@ -67,6 +77,18 @@ window.addEventListener('load', () => {
     document.getElementById('preloader').style.display = 'none';
     document.getElementById('navbar').style.display = 'flex';
     document.getElementById('color-switcher').addEventListener('click', toggleColorMode);
+
+    // set color mode
+    let mode = localStorage.getItem('color_mode');
+    if(mode == null) {
+        localStorage.setItem('color_mode', 'light');
+        console.log('default color mode set: light mode');
+    }
+    else if(mode == 'dark') {
+        toggleColorMode();
+        console.log('light mode set to dark mode');
+    }
+
 });
 
 
