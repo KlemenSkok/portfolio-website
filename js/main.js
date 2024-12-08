@@ -80,7 +80,7 @@ window.addEventListener('load', () => {
     // show navbar and color switcher
     document.getElementById('navbar').style.display = 'flex';
     document.getElementById('color-switcher').style.display = 'flex';
-    
+
     document.getElementById('color-switcher').addEventListener('click', toggleColorMode);
     document.getElementById('show-menu').addEventListener('click', () => {
         document.getElementById('navbar').classList.toggle('nav-open');
@@ -95,12 +95,12 @@ window.addEventListener('load', () => {
     // set color mode
     let mode = localStorage.getItem('color_mode');
     if(mode == null) {
-        localStorage.setItem('color_mode', 'light');
-        console.log('default color mode set: light mode');
+        localStorage.setItem('color_mode', 'light'); // light by default
+        //console.log('default color mode set: light mode');
     }
     else if(mode == 'dark') {
         toggleColorMode();
-        console.log('light mode set to dark mode');
+        //console.log('light mode set to dark mode');
     }
 
 });

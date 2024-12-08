@@ -3,19 +3,24 @@
         {
             "name": "HTML in CSS - Spletna stran",
             "description": [
-                "Spletna stran, ki sem jo naredil v prvem letniku srednje šole. Ni bila najboljša, vendar sem se veliko naučil in mislim, da vseeno spada na ta seznam."
+                "Spletna stran, ki sem jo naredil v prvem letniku srednje šole. Narejena je bila za oceno pri predmetu IKP, kjer smo se učili HTML in CSS.",
+                "Vsebina spletne strani predstavi osnove jezikov HTML in CSS. Vsebuje glavno stran in več dodatnih strani, ki so povezane med seboj.",
+                "Spletna stran ni ravno spletna, saj je bila narejena za lokalo uporabo in ni na voljo na spletu."
             ],
             "status": "končano november 2021",
             "link": "",
             "link_text": "",
-            "image": "",
-            "image_alt": ""
+            "image": "assets/images/html-in-css.png",
+            "image_alt": "Ena izmed strani spletne strani HTML in CSS"
         },
         {
             "name": "Sea Shepherd Rules",
             "description": [
-                "Videoigra, napisana v jeziku C++, z uporabo knjižnice SDL2. Narejena za oceno pri predmetu RPA v tretjem letniku srednje šole.",
-                "To je drugi odstavek opisa."
+                "To je namizna videoigrica, ki sem jo naredil v tretjem letniku srednje šole pri predmetu RPA. 100% je napisana v jeziku C++, z uporabo knjižnice SDL2 za prikaz grafičnega okolja.",
+                "Temo igre je navdihnila aktivistična ogranizacija Sea Shepherd, ki se bori proti nezakonitim kotilovcem. Igralec prevzame vlogo kapitana ladje in gre na lov za nepridipravi.",
+                "Igra se konča, ko igralec ulovi vse nasprotnike na treh nivoijih. Na koncu si igralec lahko ogleda posnetek (replay) svoje igre.",
+                "Če je bil igralec pri svojem delu dovolj hiter, se lahko uvrsti na lestvico najboljših igralcev. Hitrejše je boljše!",
+                "Igra je na voljo na GitHubu skupaj z navodili za namestitev in uporabo."
             ],
             "status": "končano maj 2024",
             "link": "https://github.com/KlemenSkok/SeaShepherdRules",
@@ -26,10 +31,26 @@
         {
             "name": "Čas za obračun",
             "description": [
-                "Online PVP videoigra, ki jo trenutno razvijam v jeziku C++ kot izdelek pri poklicni maturi. Narejena z uporabo knjižnice SDL2."
+                "Ker sem užival med izdelovanjem igre <i>\"Sea Shepherd Rules\"</i> (glej zgoraj), sem se odločil za podoben izziv tudi za maturitetni projekt.",
+                "Igra se dogaja prav tu, na Vegovi, in sicer na hodniku v srednjem nadstropju. Ideja igre je sledeča: ravno se je začel odmor za malico in dva dežurna dijaka se jo odpravita iskat v Bistro (če veš, veš), vendar je ostala le še ena malica. Hkrati pa po čudnem naključju po malico prideta tudi dva profesorja (ali dijaka, to je ni čisto jasno) in vname se epski spopad za malico.",
+                "Ta igra bo za razliko od prejšnje večigralska in bo omogočala igranje preko interneta.",
+                "Igra je že dostopna na githubu."
             ],
             "status": "v razvoju",
             "link": "https://github.com/KlemenSkok/cas-za-obracun",
+            "link_text": "GitHub",
+            "image": "",
+            "image_alt": ""
+        },
+        {
+            "name": "Osebna spletna stran",
+            "description": [
+                "To je prav ta spletna stran, ki jo trenutno gledate. Narejena je bile pri predmetu RAO v četrtem letniku srednje šole.",
+                "Napisana je v HTML, CSS in JavaScript-u, brez uporabe knjižnic ali frameworkov. Del vsebine, kot je tale, se generira dinamično iz JSON datoteke. Spletna stran je prilagojena tudi za mobilne naprave.",
+                "Koda te strani je na voljo na GitHubu."
+            ],
+            "status": "(zaenkrat) končano december 2024",
+            "link": "https://github.com/KlemenSkok/portfolio-website",
             "link_text": "GitHub",
             "image": "",
             "image_alt": ""
