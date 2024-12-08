@@ -10,13 +10,13 @@
             "status": "končano november 2021",
             "link": "",
             "link_text": "",
-            "image": "assets/images/html-in-css.png",
+            "image": "assets/images/html_in_css.png",
             "image_alt": "Ena izmed strani spletne strani HTML in CSS"
         },
         {
             "name": "Sea Shepherd Rules",
             "description": [
-                "To je namizna videoigrica, ki sem jo naredil v tretjem letniku srednje šole pri predmetu RPA. 100% je napisana v jeziku C++, z uporabo knjižnice SDL2 za prikaz grafičnega okolja.",
+                "To je namizna videoigrica, ki sem jo naredil v tretjem letniku srednje šole pri predmetu RPA. Napisana je 100% v jeziku C++ z uporabo knjižnice SDL2 za prikaz grafičnega vmesnika.",
                 "Temo igre je navdihnila aktivistična ogranizacija Sea Shepherd, ki se bori proti nezakonitim kotilovcem. Igralec prevzame vlogo kapitana ladje in gre na lov za nepridipravi.",
                 "Igra se konča, ko igralec ulovi vse nasprotnike na treh nivoijih. Na koncu si igralec lahko ogleda posnetek (replay) svoje igre.",
                 "Če je bil igralec pri svojem delu dovolj hiter, se lahko uvrsti na lestvico najboljših igralcev. Hitrejše je boljše!",
