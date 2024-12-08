@@ -74,13 +74,23 @@ window.addEventListener('load', () => {
     readProjectsData();
     readSkillsData();
     enableSmoothScroll();
-    
+
     // hide preloader
     document.getElementById('preloader').style.display = 'none';
     // show navbar and color switcher
     document.getElementById('navbar').style.display = 'flex';
     document.getElementById('color-switcher').style.display = 'flex';
+    
     document.getElementById('color-switcher').addEventListener('click', toggleColorMode);
+    document.getElementById('show-menu').addEventListener('click', () => {
+        document.getElementById('navbar').classList.toggle('nav-open');
+    });
+
+    document.querySelectorAll('.navbar-content a').forEach((a) => {
+        a.addEventListener('click', () => {
+            document.getElementById('navbar').classList.remove('nav-open');
+        });
+    });
 
     // set color mode
     let mode = localStorage.getItem('color_mode');

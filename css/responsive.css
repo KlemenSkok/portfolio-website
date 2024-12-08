@@ -1,8 +1,72 @@
 /* CSS za responsive css - za manjse zaslone */
 
 @media only screen and (max-width: 768px) {
-    #navbar ul {
+    #navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        max-height: 100vh;
+        width: 0;
+        overflow: hidden;
+        background-color: var(--color-800);
+        transition: width .3s ease;
+        z-index: 1000;
+    }
+    #navbar.nav-open {
+        width: 100vw;
+    }
+    .navbar-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        padding: 20px;
+        height: 100vh;
+        margin: 0;
+        width: 100%;
+    }
+    #navbar .nav-icon {
+        font-size: 4rem;
+    }
+    #navbar .nav-text {
+        display: inline-block;
+        font-size: 1.6rem;
+        text-decoration: none;
+        margin-left: 1rem;
+    }
+    #navbar ul li a {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-decoration: none;
+    }
+    #show-menu {
+        position: fixed;
+        display: block;
+        top: 10px;
+        left: 10px;
+        font-size: 2rem;
+        cursor: pointer;
+        z-index: 1100;
+        animation: none;
+    }
+    #show-menu {
+        font-size: 2.5rem;
+        transition: transform .5s ease;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+
+    /* #navbar ul {
         display: none;
+        width: 100%;
+        max-width: 0;
+        background-color: red;
+
     }
     #navbar .nav-menu {
         display: block;
@@ -11,6 +75,12 @@
         left: 0;
         font-size: 10vw;
     }
+    #navbar ul li a span.nav-icon {
+        display: none;
+    }
+    #navbar ul li a span.nav-text {
+        display: block;
+    } */
 
     .section {
         padding: .5rem;
