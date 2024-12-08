@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/responsive.css">
 
     <!-- icons (google fonts) -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=close,code,dark_mode,keyboard_arrow_down,keyboard_arrow_up,light_mode,mail,menu,person,school,send,work_history" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=build,call,check_circle,close,code,dark_mode,keyboard_arrow_down,keyboard_arrow_up,light_mode,mail,menu,person,school,send,sports_volleyball,work_history" />
     <!-- ? dodajanje ikon -> nizanje imen ikon na koncu linka, locevanje v vejico, po abecedi!!! -->
 </head>
 <body>
@@ -19,6 +19,15 @@
     <script type="module" src="js/main.js"></script>
     <script type="module" src="js/form.js"></script>
     <script src="js/responsive.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("p8VTIlJ7BpRgIoIKs");
+        })();
+    </script>
+
+
+    
     <div id="preloader">
         <div class="load-animation"></div>
     </div>
@@ -41,8 +50,14 @@
                 </a>
             </li>
             <li>
-                <a href="#projects">
+                <a href="#skills">
                     <span class="material-symbols-outlined nav-icon">code</span>
+                    <span class="nav-text">Znanja in spretnosti</span>
+                </a>
+            </li>
+            <li>
+                <a href="#projects">
+                    <span class="material-symbols-outlined nav-icon">build</span>
                     <span class="nav-text">Projekti</span>
                 </a>
             </li>
@@ -50,6 +65,18 @@
                 <a href="#work">
                     <span class="material-symbols-outlined nav-icon">work_history</span>
                     <span class="nav-text">Delovne izkušnje</span>
+                </a>
+            </li>
+            <li>
+                <a href="#hobbies">
+                    <span class="material-symbols-outlined nav-icon">sports_volleyball</span>
+                    <span class="nav-text">Hobiji in prosti čas</span>
+                </a>
+            </li>
+            <li>
+                <a href="#contact">
+                    <span class="material-symbols-outlined nav-icon">call</span>
+                    <span class="nav-text">Kontakt</span>
                 </a>
             </li>
         </ul>
@@ -83,24 +110,6 @@
             and I am planning to continue my studies at the Faculty of Computer and Information Science in Ljubljana.
         </p>    
     </section>
-    <section class="section" id="projects">
-        <h1>Projekti</h1>
-        <hr>
-        <p>
-            I have worked on several projects, some of which are available on my GitHub profile. 
-            I have also worked on some projects for school, which are also available on my GitHub profile.
-
-            <ul id="projects-ul" class="project-list"></ul>
-
-        </p>        
-    </section>
-    <section class="section" id="work">
-        <h1>Izkušnje pri delu</h1>
-        <hr>
-        <p>
-            I have worked multiple times as an intern at a company called INEA d.o.o., where I worked with Siemens and Allen Bradley PLCs.
-        </p>        
-    </section>
     <section class="section" id="skills">
         <h1>Znanja in spretnosti</h1>
         <hr>
@@ -108,7 +117,25 @@
             Tukaj je nekaj izmed znanj in spretnosti, ki sem jih pridobil med šolanjem in delom, pa tudi pri izdelovanju projektov med prostim časom.
             
             <div id="skills-container" class="skill-list"></div>
-
+            
+        </p>        
+    </section>
+    <section class="section" id="projects">
+        <h1>Projekti</h1>
+        <hr>
+        <p>
+            I have worked on several projects, some of which are available on my GitHub profile. 
+            I have also worked on some projects for school, which are also available on my GitHub profile.
+            
+            <ul id="projects-ul" class="project-list"></ul>
+            
+        </p>        
+    </section>
+    <section class="section" id="work">
+        <h1>Izkušnje pri delu</h1>
+        <hr>
+        <p>
+            I have worked multiple times as an intern at a company called INEA d.o.o., where I worked with Siemens and Allen Bradley PLCs.
         </p>        
     </section>
     <section class="section" id="hobbies">
@@ -124,9 +151,12 @@
         <h1>Kontakt</h1>
         <hr>
         <p>
-            Če imate vprašanje, idejo za sodelovanje ali pa želite samo pozdraviti, me lahko kontaktirate preko spodnjih platform. 
+            Če imate vprašanje, idejo za sodelovanje ali pa želite samo pozdraviti, obstaja veliko načinov, da me kontaktirate. 
+            Čeprav so eden izmed načinov tudi dimni signali, se zaradi podnebnih posledic raje odločite za katerego izmed spodnjih platform. 
+        </p>  
+        <p>
             Prav tako lahko uporabite obrazec za sporočilo – z veseljem se vam oglasim čim prej!
-
+        </p>
             <div class="contact-container">
                 <div class="contact"><a href="https://github.com/KlemenSkok" target="_blank"><img id="contact-github" src="assets/icons/github-mark.svg" alt="GitHub" /></a></div>
                 <div class="contact"><a href="https://www.linkedin.com/in/klemen-skok" target="_blank"><img src="assets/icons/LI-In-Bug.png" alt="LinkedIn" /></a></div>
@@ -137,7 +167,7 @@
                 Pošlji mi sporočilo!
                 <span class="material-symbols-outlined nav-icon">mail</span>
             </button>
-        </p>  
+        
     </section>
     
     <!-- <footer>
@@ -147,23 +177,41 @@
 </div> <!-- end of blurable content -->
 
 <!-- contact form -->
-<div id="form-container" class="open">
-    <header>
-        <span id="close-form" class="material-symbols-outlined nav-icon">close</span>
-    </header>
-    <form id="contact-form">
-        <h1></h1>
-        <label for="email">Email: </label>
-        <input type="text" name="email" required /><br>
-        <label for="subject">Zadeva: </label>
-        <input type="text" name="subject" required /><br>
-        <label for="message">Sporočilo: </label><br>
-        <textarea name="message" required></textarea><br>
-        <button type="submit" class="btn">
-            Pošlji
-            <span class="material-symbols-outlined nav-menu">send</span>
-        </button>
-    </form>
+<div id="form-container" class="hidden">
+    <div class="form-card">
+        <div id="form-obrazec">
+            <header>
+                <span id="close-form" class="material-symbols-outlined">close</span>
+            </header>
+            <div>
+                <h2>Kontaktirajte me!</h2>
+                <p>Z veseljem bom odgovoril. Prosim, izpolnite ta obrazec.</p>
+            </div>
+            <form id="contact-form">
+                <h1></h1>
+                <label for="i_email">Email: </label><br>
+                <input type="text" name="from_email" required id="i_email"/><br>
+                <label for="i_subject">Zadeva: </label><br>
+                <input type="text" name="subject" required id="i_subject" /><br>
+                <label for="i_message">Sporočilo: </label><br>
+                <textarea name="message" maxlength="1000" id="i_message"></textarea><br>
+                <button type="submit" class="btn">
+                    Pošlji
+                    <span class="material-symbols-outlined nav-menu">send</span>
+                </button>
+            </form>
+        </div>
+        <div id="form-loader"><div class="sending-anim"></div></div>
+        <div id="form-sent">
+            <div class="exit-btn">
+                <span id="close-form-2" class="material-symbols-outlined nav-icon">close</span>
+            </div>
+            <div class="form-sent-contents">
+                <span class="material-symbols-outlined nav-menu">check_circle</span>
+                <h2>Pošiljanje uspešno!</h2>
+            </div>
+        </div>
+    </div>
 </div>
 
 </body>

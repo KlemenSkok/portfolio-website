@@ -74,8 +74,12 @@ window.addEventListener('load', () => {
     readProjectsData();
     readSkillsData();
     enableSmoothScroll();
+    
+    // hide preloader
     document.getElementById('preloader').style.display = 'none';
+    // show navbar and color switcher
     document.getElementById('navbar').style.display = 'flex';
+    document.getElementById('color-switcher').style.display = 'flex';
     document.getElementById('color-switcher').addEventListener('click', toggleColorMode);
 
     // set color mode

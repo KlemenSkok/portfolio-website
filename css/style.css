@@ -63,7 +63,7 @@ body {
     position: fixed;
     right: 0;
     top: 0;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     padding: .5rem;
@@ -73,7 +73,7 @@ body {
     color: #d9773b;
     
     & span {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     &:hover {
@@ -110,7 +110,7 @@ body {
     display: none; /* initially hidden */
 }
 #navbar .nav-icon {
-    font-size: 5rem;
+    font-size: calc(2rem + 5vh);
     transition: 0.2s ease-in;
 
     &:hover {
@@ -349,23 +349,13 @@ body {
     margin: auto auto;
     z-index: 1;
     top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 30%;
-    height: 70%;
-
-    padding: 3rem 1rem;
+    width: 100%;
+    height: 100%;
+    padding: .7rem;
+    
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-
-
-    background-color: var(--color-950);
-    border: 2px solid var(--color-700);
-    border-radius: .7rem;
-    overflow: hidden;
+    justify-content: center;
+    align-items: center;
     transition: 1s ease-in-out all;
     
     &.open {
@@ -375,43 +365,124 @@ body {
     &.hidden {
         display: none;
         opacity: 0;
-    }    
+    }
+}
+.form-card {
+    max-width: 450px;
+    width: 100%;
+    overflow: hidden;
+    min-height: 40vh;
+}
+#form-obrazec { 
+    border: 2px solid var(--color-700);
+    background-color: var(--color-900);
+    border-radius: .7rem;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    
     & header {
-        position: absolute;
-        right: 0;
-        top: 0;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
         user-select: none;
         color: var(--color-300);
     }
+    & > div {
+        padding: 1rem;
+    }
+}
+#form-loader {
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-900);
+    border: 2px solid var(--color-700);
+    border-radius: .7rem;
+}
+#form-sent {
+    display: none;
+    background-color: var(--color-900);
+    border: 2px solid var(--color-700);
+    border-radius: .7rem;
+    user-select: none;
+
+    & .exit-btn {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+        user-select: none;
+        color: var(--color-300);
+    }
+    & .form-sent-contents {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: #07fc03;
+        height: 100%;
+
+        & span {
+            font-size: 5rem;
+        }
+        & h2 {
+            font-size: 2rem;
+        }
+    }
+
 }
 /* form */
 #contact-form {
+    padding: 1rem;
     width: 100%;
 
     & button {
         float: right;
         font-size: 1.2rem;
-        padding: 0 5px;
-    }   
+        padding: .5rem 1rem;
+        margin: 1rem 0;
+        span {
+            font-size: 1.5rem;
+        }
+    }
 }
-label {
+#contact-form label {
     color: var(--color-300);
-    font-size: 1rem;
-    margin: 1rem 0;
+    font-size: .8rem;
+    margin: 1rem 0 0 0;
     user-select: none;
 }
-input {
-    width: 60%;
-    height: 1.3rem;
-    border-radius: .4rem;
+#contact-form input {
+    min-width: 70%;
+    max-width: 100%;
+    height: 2rem;
+    border-radius: .2rem;
     padding-left: .5rem;
+    margin-top: 0;
+    border: 1px solid var(--color-500);
+    font-size: 1rem;
+    overflow-x: visible;
+
+    &.error {
+        border: double red;
+    }
 }
-textarea {
+#contact-form textarea {
+    font-size: 1rem;
     max-width: 100%;
     min-width: 100%;
-    padding: .5rem;
+    max-height: 100vh;
+    min-height: 10rem;
+    border: 1px solid var(--color-500);
+    font-family: inherit;
+    padding: 0 .5rem;
 }
-
 
 
 
