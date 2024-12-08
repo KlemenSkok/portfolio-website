@@ -59,31 +59,9 @@
             transform: scale(1.1);
         }
     }
-
-
-    /* #navbar ul {
-        display: none;
-        width: 100%;
-        max-width: 0;
-        background-color: red;
-
-    }
-    #navbar .nav-menu {
-        display: block;
-        position: fixed;
-        top: 0;
-        left: 0;
-        font-size: 10vw;
-    }
-    #navbar ul li a span.nav-icon {
-        display: none;
-    }
-    #navbar ul li a span.nav-text {
-        display: block;
-    } */
-
     .section {
-        padding: .5rem;
+        margin: 1rem 15%;
+        padding: .5rem 0rem;
     }
 
 }

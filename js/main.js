@@ -85,10 +85,17 @@ window.addEventListener('load', () => {
     document.getElementById('show-menu').addEventListener('click', () => {
         document.getElementById('navbar').classList.toggle('nav-open');
     });
-
+    // close navbar on mobile when link is clicked
     document.querySelectorAll('.navbar-content a').forEach((a) => {
         a.addEventListener('click', () => {
             document.getElementById('navbar').classList.remove('nav-open');
+        });
+    });
+    // scroll to first section
+    document.getElementById('hero-arrow').addEventListener('click', () => {
+        document.querySelector('.section').scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
         });
     });
 

@@ -45,7 +45,7 @@
         {
             "name": "Osebna spletna stran",
             "description": [
-                "To je prav ta spletna stran, ki jo trenutno gledate. Narejena je bile pri predmetu RAO v četrtem letniku srednje šole.",
+                "To je prav ta spletna stran, ki jo trenutno gledate. Narejena je bila pri predmetu RAO v četrtem letniku srednje šole.",
                 "Napisana je v HTML, CSS in JavaScript-u, brez uporabe knjižnic ali frameworkov. Del vsebine, kot je tale, se generira dinamično iz JSON datoteke. Spletna stran je prilagojena tudi za mobilne naprave.",
                 "Koda te strani je na voljo na GitHubu."
             ],
