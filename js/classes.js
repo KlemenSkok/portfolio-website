@@ -2,7 +2,7 @@
 function getRandomColor() {
     // hsl format: hsl(x, 40%, 85%)
     let x = Math.floor(Math.random() * 360);
-    return `hsl(${x}, 30%, 30%)`;
+    return `hsl(${x}, 50%, 40%)`;
 }
 
 function shuffleArray(array) { // da so skilli nakljucno razporejeni

@@ -1,6 +1,11 @@
 /* CSS za responsive css - za manjse zaslone */
 
 @media only screen and (max-width: 768px) {
+    
+    #hero {
+        flex-direction: column;
+    }
+
     #navbar {
         position: fixed;
         top: 0;

@@ -31,7 +31,8 @@ body {
         /* var(--secondary-back-color) 95% */    /* 100% */
     /*); */
 
-    background: linear-gradient(30deg, var(--color-800) , var(--color-800) 30%, var(--color-950));
+    /* background: linear-gradient(30deg, var(--color-800) , var(--color-800) 30%, var(--color-950)); */
+    background: var(--color-950);
 
     /* the gradient pattern should scale to the entire window size */
     background-size: cover;
@@ -52,7 +53,6 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: var(--color-950);
     background-color: var(--color-950);
     font-size: 2rem;
     font-weight: bold;
@@ -85,18 +85,31 @@ body {
 
 /* hero section */
 #hero {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
     height: 100vh;
+    width: 100%;
     z-index: 1;
-    position: relative;
+
+    & > * {
+        margin: 0;
+    }
 }
-#hero > * {
+#hero .hero-content {
     text-align: center;
     font-size: 4rem;
     color: var(--color-400);
-    padding: 1rem;
+    margin: 0;
+
+    & p {
+        font-size: 1.5rem;
+        margin: -1rem 0 0 0;
+    }
 }
 #hero-arrow {
     position: absolute;
@@ -108,6 +121,21 @@ body {
 
     & span {
         font-size: 4rem;
+    }
+}
+#hero .hero-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    overflow: hidden;
+    width: 17rem;
+    height: auto;
+    user-select: none;
+    
+    & img {
+        border-radius: 50%;
+        width: 14rem;
     }
 }
 
@@ -176,7 +204,7 @@ body {
     }
 }
 .section a {
-    color: var(--color2-500);
+    color: var(--color2-600);
     text-decoration: dotted underline;
     
 }
@@ -257,11 +285,11 @@ body {
     /* border: 1px solid var(--color-500); */ /* debugging */
 }
 .skill-box {
-    background-color: var(--color-950);
+    background-color: var(--color-800);
     color: var(--color-300);
     padding: .2rem .8rem;
     margin: .3rem;
-    border-radius: 10px 100px / 120px;
+    border-radius: 5px;
     border-top: 1px solid       var(--test-650); /* barvo obrobe itak overridea js */
     border-right: 3px solid     var(--test-650);
     border-bottom: 4px solid    var(--test-650);
